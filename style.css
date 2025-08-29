@@ -1,0 +1,76 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navigation - Flexbox */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #333;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Main Layout - Grid */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* content + sidebar */
+  gap: 20px;
+  padding: 20px;
+}
+
+.content, .sidebar {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+/* Responsive Design - Media Queries */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr; /* stack content & sidebar */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
